@@ -22,8 +22,38 @@
             type: 'GET',
             url: "https://apis.datos.gob.ar/georef/api/provincias",
             success: function(res) {
-                console.log("ACA ESTOT");
-                console.log(res);
+                
+               // console.log(res); //Aca estan los datos
+                //Loop 1
+               for (let index = 0; index < res['provincias'].length; index++) {
+                   //const element = array[index];
+                   console.log(res['provincias'][index]['nombre']);
+                   
+               }
+               //Loop 2
+               array.forEach(element => {
+                   
+               });
+               //Loop 3
+               $.each(data, function(y, reloj_pers) {
+                  cant_personas = cant_personas +1;
+             
+                  //Solo par aDEBUG
+                  if (reloj_pers['id'] == 1 && false) {
+                    personas_.push(reloj_pers);
+                  }else{
+                    personas_.push(reloj_pers);
+                  }
+                  
+                });
+                //Loop 4
+                ///https://www.youtube.com/watch?v=MXmQM_Uehtk
+                /// 6:40
+
+               // console.log(res['provincias'][0]['nombre']); //ACCEDI A LA PRIMERA PROVINCIA
+                //console.log(res['provincias'][1]['nombre']);
+                //console.log(res['provincias'][2]['nombre']);
+                
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
                 console.log('ES un ERROR');
@@ -44,7 +74,20 @@
     </thead>
 
     <tbody>
-      
+
+        <tr>
+            <th>1</th>
+            <td>Cordoba</td>
+            <td>12312</td>
+            <td>12312</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>Catamarca</td>
+            <td>12312</td>
+            <td>12312</td>
+        </tr>
+
     </tbody>
   </table>
 
